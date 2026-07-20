@@ -13,7 +13,7 @@ export function Contact() {
     >
       <div className="mx-auto max-w-7xl">
         <motion.div
-          className="rounded-[24px] border border-line bg-bg-elevated px-6 py-12 sm:px-10 sm:py-16 lg:px-14"
+          className="rounded-[24px] border border-line bg-bg-elevated px-6 py-12 sm:px-10 sm:py-16 lg:px-14 mb-[calc(2rem+var(--safe-b))]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
