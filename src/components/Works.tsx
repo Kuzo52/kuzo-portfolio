@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from "@/data/projects";
+import { categories, projects } from "@/data/projects";
 import { WorkCard } from "@/components/WorkCard";
 
 export function Works() {
@@ -11,7 +11,7 @@ export function Works() {
       aria-labelledby="works-title"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-10 max-w-xl sm:mb-14">
+        <header className="mb-12 max-w-xl sm:mb-16">
           <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-text-muted">
             Избранное
           </p>
@@ -22,14 +22,32 @@ export function Works() {
             Работы
           </h2>
           <p className="mt-3 text-[15px] leading-relaxed text-text-muted sm:text-[16px]">
-            Лендинги, SaaS и&nbsp;Mini&nbsp;Apps — десять кейсов с&nbsp;живыми демо.
+            Лендинги, SaaS и&nbsp;Mini&nbsp;Apps — с&nbsp;живыми демо.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <WorkCard key={project.id} project={project} index={index} />
-          ))}
+        <div className="flex flex-col gap-14 sm:gap-16">
+          {categories.map((category) => {
+            const items = projects.filter((p) => p.category === category.id);
+            if (items.length === 0) return null;
+
+            return (
+              <div key={category.id}>
+                <h3 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.22em] text-accent sm:mb-6">
+                  {category.label}
+                </h3>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+                  {items.map((project, index) => (
+                    <WorkCard
+                      key={project.id}
+                      project={project}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

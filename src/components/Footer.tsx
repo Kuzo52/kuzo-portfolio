@@ -51,14 +51,6 @@ export function Footer() {
                 {contact.telegramHandle}
               </a>
             </li>
-            <li>
-              <a
-                href={`mailto:${contact.email}`}
-                className="tap text-[14px] text-text transition-colors hover:text-accent"
-              >
-                {contact.email}
-              </a>
-            </li>
           </ul>
         </div>
       </div>

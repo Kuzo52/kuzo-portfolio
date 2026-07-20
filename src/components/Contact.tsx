@@ -32,7 +32,7 @@ export function Contact() {
             Обсудим объём, сроки и&nbsp;формат. Отвечаю в&nbsp;Telegram в&nbsp;рабочие дни.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
+          <div className="mt-9 sm:mt-10">
             <a
               href={contact.telegram}
               target="_blank"
@@ -41,13 +41,6 @@ export function Contact() {
               style={{ transitionTimingFunction: "var(--ease-out)" }}
             >
               Telegram {contact.telegramHandle}
-            </a>
-            <a
-              href={`mailto:${contact.email}`}
-              className="tap inline-flex min-h-12 items-center justify-center rounded-[12px] border border-line bg-surface px-7 text-[14px] font-medium text-text transition-colors duration-300 hover:border-accent/40 hover:text-accent"
-              style={{ transitionTimingFunction: "var(--ease-out)" }}
-            >
-              {contact.email}
             </a>
           </div>
         </motion.div>

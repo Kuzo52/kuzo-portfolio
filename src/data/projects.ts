@@ -1,3 +1,5 @@
+export type ProjectCategory = "landings" | "saas" | "mini-apps";
+
 export type Project = {
   id: string;
   title: string;
@@ -5,17 +7,19 @@ export type Project = {
   summary: string;
   demoUrl: string | null;
   live: boolean;
+  category: ProjectCategory;
 };
 
+export const categories: {
+  id: ProjectCategory;
+  label: string;
+}[] = [
+  { id: "landings", label: "Landings" },
+  { id: "saas", label: "SaaS" },
+  { id: "mini-apps", label: "Mini Apps" },
+];
+
 export const projects: Project[] = [
-  {
-    id: "pulse",
-    title: "Pulse",
-    type: "SaaS / mini CRM",
-    summary: "Сделки, клиенты и статусы в одном кабинете — без лишнего шума.",
-    demoUrl: "https://kuzo52.github.io/pulse-crm/",
-    live: true,
-  },
   {
     id: "framelab",
     title: "FrameLab",
@@ -23,6 +27,7 @@ export const projects: Project[] = [
     summary: "Запись на съёмку и портфолио студии в одном спокойном потоке.",
     demoUrl: "https://kuzo52.github.io/frame-lab/",
     live: true,
+    category: "landings",
   },
   {
     id: "lait-pur",
@@ -31,6 +36,7 @@ export const projects: Project[] = [
     summary: "Премиальная подача продукта: история, вкусы, путь от фермы до стекла.",
     demoUrl: "https://kuzo52.github.io/lait-pur/",
     live: true,
+    category: "landings",
   },
   {
     id: "nordic",
@@ -39,6 +45,7 @@ export const projects: Project[] = [
     summary: "Каталог с фильтрами и карточками, где удобно выбирать и сравнивать.",
     demoUrl: "https://kuzo52.github.io/nordic-furniture/",
     live: true,
+    category: "landings",
   },
   {
     id: "kontur",
@@ -47,6 +54,7 @@ export const projects: Project[] = [
     summary: "Запись и услуги детейлинга без путаницы в пакетах и сроках.",
     demoUrl: "https://kuzo52.github.io/kontur-detailing/",
     live: true,
+    category: "landings",
   },
   {
     id: "gromov",
@@ -55,6 +63,7 @@ export const projects: Project[] = [
     summary: "Личный сайт-хаб: позиционирование, услуги и прямой контакт.",
     demoUrl: "https://kuzo52.github.io/gromov-strategy/",
     live: true,
+    category: "landings",
   },
   {
     id: "neurocraft",
@@ -63,6 +72,16 @@ export const projects: Project[] = [
     summary: "Посадочная страница курса с ясной структурой и сильным оффером.",
     demoUrl: "https://kuzo52.github.io/neurocraft-course/",
     live: true,
+    category: "landings",
+  },
+  {
+    id: "pulse",
+    title: "Pulse",
+    type: "SaaS / mini CRM",
+    summary: "Сделки, клиенты и статусы в одном кабинете — без лишнего шума.",
+    demoUrl: "https://kuzo52.github.io/pulse-crm/",
+    live: true,
+    category: "saas",
   },
   {
     id: "kuzospy",
@@ -71,6 +90,7 @@ export const projects: Project[] = [
     summary: "Игра «Шпион» прямо в Telegram — без установки и лишних шагов.",
     demoUrl: "https://kuzo52.github.io/kuzospy/",
     live: true,
+    category: "mini-apps",
   },
   {
     id: "kuzocards",
@@ -79,14 +99,16 @@ export const projects: Project[] = [
     summary: "Карточки и механика внутри Telegram с быстрым стартом из бота.",
     demoUrl: "https://kuzo52.github.io/KuzoCards/",
     live: true,
+    category: "mini-apps",
   },
   {
-    id: "aeternum",
-    title: "AETERNUM",
-    type: "Люкс-бренд часов",
-    summary: "Люксовая витрина часов: атмосфера, характер, акцент на детали.",
-    demoUrl: null,
-    live: false,
+    id: "kuzomusic",
+    title: "KuzoMusic",
+    type: "Telegram-бот",
+    summary: "Поиск треков и установка музыки в профиль — прямо в Telegram.",
+    demoUrl: "https://t.me/kuzomusicbot",
+    live: true,
+    category: "mini-apps",
   },
 ];
 
@@ -117,8 +139,6 @@ export const stack = [
 export const contact = {
   telegram: "https://t.me/kuzoceo",
   telegramHandle: "@kuzoceo",
-  /** Личный email в локальных проектах не найден — обновите при необходимости. */
-  email: "hello@kuzoself.ru",
 } as const;
 
 export const nav = [
