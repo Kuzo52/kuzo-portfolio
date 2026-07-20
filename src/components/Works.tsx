@@ -22,7 +22,7 @@ export function Works() {
             Работы
           </h2>
           <p className="mt-3 text-[15px] leading-relaxed text-text-muted sm:text-[16px]">
-            Лендинги, SaaS и&nbsp;Mini&nbsp;Apps — с&nbsp;живыми демо.
+            Лендинги, SaaS и&nbsp;Mini&nbsp;Apps — с&nbsp;живыми проектами.
           </p>
         </header>
 

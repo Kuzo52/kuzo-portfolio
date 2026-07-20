@@ -42,12 +42,12 @@ export function Header() {
         <a
           href="#hero"
           className="tap font-display text-[15px] font-semibold tracking-tight text-text"
-          aria-label="На&nbsp;главную"
+          aria-label="На главную"
         >
           Kuzo
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Основная">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Основная навигация">
           {nav.map((item) => (
             <a
               key={item.href}
@@ -110,7 +110,7 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: easeOut }}
             className="overflow-hidden border-t border-line bg-bg/95 backdrop-blur-xl md:hidden"
-            aria-label="Мобильная"
+            aria-label="Мобильная навигация"
           >
             <ul className="section-pad flex flex-col gap-1 py-4 pb-[calc(1rem+var(--safe-b))]">
               {nav.map((item) => (

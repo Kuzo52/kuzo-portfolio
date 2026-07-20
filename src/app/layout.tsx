@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Делаю интерфейсы, которые выглядят дорого и работают быстро. Лендинги, SaaS и Telegram Mini Apps.",
   authors: [{ name: "Kuzo" }],
   openGraph: {
-    title: "Kuzo — frontend-разработчик",
+    title: "Kuzo — frontend-разработчик, Москва",
     description:
       "Интерфейсы, которые выглядят дорого и работают быстро. Москва.",
     locale: "ru_RU",
