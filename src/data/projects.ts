@@ -115,25 +115,16 @@ export const projects: Project[] = [
 export const principles = [
   {
     title: "Чистота",
-    text: "Семантика, воздух и иерархия. Ничего лишнего на экране.",
+    text: "Воздух, иерархия и ясный смысл. На экране только то, что ведёт к действию.",
   },
   {
-    title: "Motion",
-    text: "Движение с физикой: мягкий вход, точный отклик, без шума.",
+    title: "Темп",
+    text: "Мягкий вход, точный отклик, без визуального шума. Интерфейс ощущается живо.",
   },
   {
     title: "Результат",
-    text: "Интерфейс должен помогать бизнесу: быстрее, яснее, дороже.",
+    text: "Сайт должен помогать бизнесу: быстрее заявки, яснее оффер, дороже восприятие.",
   },
-] as const;
-
-export const stack = [
-  "React",
-  "TypeScript",
-  "Next.js",
-  "Tailwind",
-  "Framer Motion",
-  "Vite",
 ] as const;
 
 export const contact = {
@@ -144,6 +135,5 @@ export const contact = {
 export const nav = [
   { href: "#works", label: "Работы" },
   { href: "#approach", label: "Подход" },
-  { href: "#stack", label: "Стек" },
   { href: "#contact", label: "Контакт" },
 ] as const;
