@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { principles } from "@/data/projects";
-import { easeOut } from "@/lib/motion";
 
 export function Principles() {
   return (
@@ -12,31 +10,20 @@ export function Principles() {
       aria-labelledby="approach-title"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-7 max-w-xl sm:mb-14">
-          <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-text-muted">
-            Метод
-          </p>
+        <header className="mb-8 text-center sm:mb-14">
           <h2
             id="approach-title"
-            className="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-semibold tracking-tight text-text"
+            className="font-display text-[clamp(2.25rem,6vw,3.5rem)] font-semibold tracking-tight text-text"
           >
-            Как работаю
+            Как я&nbsp;работаю?
           </h2>
         </header>
 
         <ol className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
           {principles.map((item, index) => (
-            <motion.li
+            <li
               key={item.title}
               className="rounded-[20px] border border-line bg-bg-elevated p-6 sm:p-7"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
-                ease: easeOut,
-              }}
             >
               <span className="font-display text-[13px] font-medium text-accent">
                 0{index + 1}
@@ -47,7 +34,7 @@ export function Principles() {
               <p className="mt-3 text-[14px] leading-relaxed text-text-muted sm:text-[15px]">
                 {item.text}
               </p>
-            </motion.li>
+            </li>
           ))}
         </ol>
       </div>

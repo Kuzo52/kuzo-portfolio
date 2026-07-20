@@ -1,27 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
 import type { Project } from "@/data/projects";
-import { easeOut } from "@/lib/motion";
 
 type Props = {
   project: Project;
-  index: number;
 };
 
-export function WorkCard({ project, index }: Props) {
+export function WorkCard({ project }: Props) {
   const demoHref = project.demoUrl ?? undefined;
   const hasDemo = Boolean(project.demoUrl);
 
   return (
-    <motion.article
-      className="group flex h-full flex-col rounded-[20px] border border-line bg-surface p-5 transition-[border-color,background-color,transform] duration-400 sm:p-6"
+    <article className="group flex h-full flex-col rounded-[20px] border border-line bg-surface p-5 transition-[border-color,background-color,transform] duration-300 sm:p-6 will-change-transform hover:-translate-y-0.5 hover:border-white/14"
       style={{ transitionTimingFunction: "var(--ease-out)" }}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.5, delay: Math.min(index * 0.04, 0.28), ease: easeOut }}
-      whileHover={{ y: -3 }}
     >
       <div className="mb-5 flex items-center justify-between gap-3">
         <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-text-muted">
@@ -61,6 +52,6 @@ export function WorkCard({ project, index }: Props) {
           Скоро
         </span>
       )}
-    </motion.article>
+    </article>
   );
 }

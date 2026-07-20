@@ -8,34 +8,34 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="section-pad relative flex min-h-[100dvh] flex-col items-center justify-center pb-10 pt-[calc(5.5rem+var(--safe-t))] text-center sm:pb-16"
+      className="section-pad relative flex min-h-[100dvh] flex-col items-center justify-center pb-6 pt-[calc(5.5rem+var(--safe-t))] text-center sm:pb-10"
       aria-labelledby="hero-title"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
         <motion.h1
           id="hero-title"
           className="font-display text-[clamp(4.5rem,22vw,12rem)] font-semibold leading-[0.85] tracking-[-0.04em] text-accent"
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: easeOut }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.55, ease: easeOut }}
         >
           KUZO
         </motion.h1>
 
         <motion.p
           className="mt-4 text-[clamp(0.85rem,2.4vw,1.15rem)] font-medium uppercase tracking-[0.42em] text-text-muted sm:mt-5 sm:tracking-[0.5em]"
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.12, ease: easeOut }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.45, delay: 0.08, ease: easeOut }}
         >
           Portfolio
         </motion.p>
 
         <motion.div
           className="mt-12 flex w-full max-w-sm flex-col gap-3 sm:mt-14 sm:max-w-none sm:flex-row sm:items-center sm:justify-center"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.22, ease: easeOut }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.45, delay: 0.16, ease: easeOut }}
         >
           <a
             href="#works"

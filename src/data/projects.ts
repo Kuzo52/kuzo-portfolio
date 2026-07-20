@@ -134,6 +134,6 @@ export const contact = {
 
 export const nav = [
   { href: "#works", label: "Работы" },
-  { href: "#approach", label: "Подход" },
+  { href: "#approach", label: "Как я работаю" },
   { href: "#contact", label: "Контакт" },
 ] as const;

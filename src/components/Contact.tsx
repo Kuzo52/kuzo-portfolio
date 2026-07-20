@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { contact } from "@/data/projects";
-import { easeOut } from "@/lib/motion";
 
 function TelegramIcon({ className }: { className?: string }) {
   return (
@@ -25,13 +23,7 @@ export function Contact() {
       aria-labelledby="contact-title"
     >
       <div className="mx-auto max-w-7xl">
-        <motion.div
-          className="mb-[calc(2rem+var(--safe-b))] rounded-[24px] border border-line bg-bg-elevated px-6 py-12 sm:px-10 sm:py-16 lg:px-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.55, ease: easeOut }}
-        >
+        <div className="mb-[calc(2rem+var(--safe-b))] rounded-[24px] border border-line bg-bg-elevated px-6 py-12 sm:px-10 sm:py-16 lg:px-14">
           <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-text-muted">
             Контакт
           </p>
@@ -60,7 +52,7 @@ export function Contact() {
               </span>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
