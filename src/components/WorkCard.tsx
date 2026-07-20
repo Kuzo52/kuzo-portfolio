@@ -51,14 +51,14 @@ export function WorkCard({ project, index }: Props) {
           className="tap mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-[12px] border border-line bg-bg-elevated text-[13px] font-medium text-text transition-colors duration-300 group-hover:border-accent/35 group-hover:text-accent hover:border-accent/50 hover:bg-accent-dim sm:w-auto sm:px-5"
           style={{ transitionTimingFunction: "var(--ease-out)" }}
         >
-          Demo
+          Смотреть
         </a>
       ) : (
         <span
           className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-[12px] border border-line/60 bg-bg-elevated/40 text-[13px] font-medium text-text-muted/70 sm:w-auto sm:px-5"
           title="Ссылка скоро появится"
         >
-          Demo скоро
+          Скоро
         </span>
       )}
     </motion.article>
