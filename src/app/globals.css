@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0908;
+  --bg-elevated: #141210;
+  --surface: #1c1916;
+  --line: rgba(255, 245, 230, 0.1);
+  --text: #f3eee6;
+  --text-muted: #9c948a;
+  --accent: #c6a87a;
+  --accent-strong: #e0c49a;
+  --accent-dim: rgba(198, 168, 122, 0.14);
+  --live: #8fae8b;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-dim: var(--accent-dim);
+  --color-live: var(--live);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-unbounded);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overflow-x: clip;
+  background:
+    radial-gradient(
+      1000px 600px at 15% -10%,
+      rgba(198, 168, 122, 0.16),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #0a0908 0%, #100e0c 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: var(--safe-l);
+  padding-right: var(--safe-r);
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tap {
+  transition: transform 0.18s var(--ease-out);
+}
+
+.tap:active {
+  transform: scale(0.97);
+}
+
+.section-pad {
+  padding-inline: max(1.25rem, var(--safe-l));
+  padding-inline-end: max(1.25rem, var(--safe-r));
+}
+
+@media (min-width: 640px) {
+  .section-pad {
+    padding-inline: max(1.75rem, var(--safe-l));
+    padding-inline-end: max(1.75rem, var(--safe-r));
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-inline: max(2rem, var(--safe-l));
+    padding-inline-end: max(2rem, var(--safe-r));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .tap:active {
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
