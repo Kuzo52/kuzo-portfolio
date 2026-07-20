@@ -8,11 +8,11 @@ export function Principles() {
   return (
     <section
       id="approach"
-      className="section-pad scroll-mt-20 py-20 sm:py-28"
+      className="section-pad scroll-mt-20 py-12 sm:py-28"
       aria-labelledby="approach-title"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-10 max-w-xl sm:mb-14">
+        <header className="mb-7 max-w-xl sm:mb-14">
           <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-text-muted">
             Метод
           </p>

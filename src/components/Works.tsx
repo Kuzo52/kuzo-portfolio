@@ -7,11 +7,11 @@ export function Works() {
   return (
     <section
       id="works"
-      className="section-pad scroll-mt-20 py-20 sm:py-28"
+      className="section-pad scroll-mt-20 py-12 sm:py-28"
       aria-labelledby="works-title"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-12 max-w-xl sm:mb-16">
+        <header className="mb-8 max-w-xl sm:mb-16">
           <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-text-muted">
             Избранное
           </p>
@@ -26,7 +26,7 @@ export function Works() {
           </p>
         </header>
 
-        <div className="flex flex-col gap-14 sm:gap-16">
+        <div className="flex flex-col gap-10 sm:gap-16">
           {categories.map((category) => {
             const items = projects.filter((p) => p.category === category.id);
             if (items.length === 0) return null;

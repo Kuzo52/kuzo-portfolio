@@ -8,7 +8,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="section-pad scroll-mt-20 py-20 sm:py-28"
+      className="section-pad scroll-mt-20 py-12 sm:py-28"
       aria-labelledby="contact-title"
     >
       <div className="mx-auto max-w-7xl">

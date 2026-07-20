@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="section-pad relative flex min-h-[100dvh] flex-col items-center justify-center pb-16 pt-[calc(5.5rem+var(--safe-t))] text-center"
+      className="section-pad relative flex min-h-[100dvh] flex-col items-center justify-center pb-10 pt-[calc(5.5rem+var(--safe-t))] text-center sm:pb-16"
       aria-labelledby="hero-title"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center">

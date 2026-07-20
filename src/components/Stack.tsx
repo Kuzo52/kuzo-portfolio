@@ -8,11 +8,11 @@ export function Stack() {
   return (
     <section
       id="stack"
-      className="section-pad scroll-mt-20 py-20 sm:py-28"
+      className="section-pad scroll-mt-20 py-12 sm:py-28"
       aria-labelledby="stack-title"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-10 max-w-xl sm:mb-12">
+        <header className="mb-7 max-w-xl sm:mb-12">
           <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-text-muted">
             Инструменты
           </p>
